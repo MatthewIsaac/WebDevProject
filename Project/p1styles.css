@@ -1,0 +1,351 @@
+/********w************
+    
+    Project 1 Stylesheet
+    Name: Matt Isaac
+    Date: March 1, 2023
+    Description: Second submission for Project 1 in WEBD.
+
+*********************/
+
+html,
+body,
+section,
+p,
+header,
+nav,
+footer,
+div,
+article,
+aside,
+ol,
+ul,
+li,
+h1,
+h6 {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #e6e6e6;
+}
+
+body {
+	width: 810px;
+	height: 925px;
+	background-color: #fff;
+	border-radius: 8px;
+	margin: 10px auto;
+	padding: 10px;
+	box-shadow: 1px 1px 2px #a2a2a2, -1px -1px 2px #a2a2a2;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+	header img {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	header nav ul {
+		display: flex;
+		margin: 35px 0px 0px 0px;
+	}
+
+		header nav ul li {
+			display: flex;
+			justify-content: space-between;
+			margin: 0px 2px;
+			padding: 0px 2px;
+			border-right: 1px solid black;
+		}
+
+			header nav ul li:last-child {
+				border-right: none;
+			}
+	
+	header nav div {
+		display: flex;
+		justify-content: flex-end;
+		padding: 25px 0px 0px 0px;
+	}
+
+		header div input {
+			margin: 25px 0px 0px 0px;
+			width: 90px;
+		}
+
+#mainHeading {
+	position: relative;
+	background-image: url("images/headerBackground.jpg;");
+	background-repeat: no-repeat;
+	color: white;
+}
+
+	#mainHeading img {
+		width: 100%;
+	}
+
+	#mainHeading h1 {
+		position: absolute;
+		top: 10px;
+		left: 20px;
+	}
+
+	#mainHeading h2 {
+		position: absolute;
+		bottom: 10px;
+		right: 30px;
+		font-size: 1.1em;
+	}
+
+#horizontalNavBar ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	text-decoration: none;
+	background-color: blue;
+	background-image: linear-gradient(rgb(141, 211, 252), rgb(14, 106, 136));
+	list-style: none;
+	margin: -5px 0px 0px 0px;
+	height: 25px;
+	color: white;
+}
+
+	#horizontalNavBar ul li {
+		display: flex;
+		color: white;
+		margin: 0px 4px;
+		padding: 0px 4px 0px 0px;
+		font-weight: bold;
+		font-size: 0.9em;
+		border-right: 1px solid black;
+	}
+
+		#horizontalNavBar ul li:last-child {
+			border-right: none;
+		}
+
+		#horizontalNavBar ul li a {
+			color: rgb(240, 236, 236);
+		}
+
+			#horizontalNavBar ul li a:hover {
+				color: red;
+			}
+
+			#horizontalNavBar ul li a:focus {
+				color: yellow;
+			}
+
+#content {
+	display: flex;
+}
+
+	#substance p a {
+		margin: 0px;
+	}
+
+#verticalNavBar {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	font-size: 0.9em;
+}
+
+	#verticalNavBar p {
+		position: relative;
+		top: 20px;
+	}
+
+#aboutUs {
+	list-style: none;
+	background-image: linear-gradient(white, lightgrey);
+	padding: 7px 5px;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+	#aboutUs a {
+		color: rgb(37, 37, 37);
+	}
+
+#restOfList {
+	list-style: inside;
+}
+
+	#restOfList li {
+		background-image: linear-gradient(white, lightgrey);
+		padding: 7px 5px;
+		font-weight: bold;
+		font-size: 0.8em;
+	}
+
+		#restOfList li a {
+			color: rgb(37, 37, 37);
+		}
+
+#verticalNavBar p {
+	color: black;
+	margin: 23px 0px;
+	padding: 5px 0px;
+	border-top: solid;
+}
+
+	#verticalNavBar p img{
+		float: right;
+	}
+
+		#aboutUs li a:hover {
+			color: red;
+		}
+
+		#aboutUs li a:focus {
+			color: yellow;
+		}
+
+		#restOfList li a:hover {
+			color: red;
+		}
+
+		#restOfList li a:focus {
+			color: yellow;
+		}
+
+#youAreHere {
+	position: relative;
+	bottom: 460px;
+	left: 215px;
+	display: flex;
+	font-size: 0.7em;
+}
+
+	#youAreHere a {
+		margin: 0px 4px 0px 0px;
+	}
+
+#substance {
+	position: relative;
+	bottom: 460px;
+	left: 225px;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+}
+
+	#substance h2 {
+		border-bottom: 1px solid lightgrey;
+	}
+
+	#substance p a {
+		color: rgb(89, 89, 242);
+	}
+
+	#findOut {
+		margin: -15px 0px 20px 0px;
+	}
+
+#textWithImageFloatRight {
+	display: flex;
+	justify-content: center;
+	margin: 20px -30px 0px 5px;
+}
+
+#imageWithText {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	outline: 1px lightgray solid;
+	font-size: 0.85em;
+	padding: 5px;
+}
+
+	#imageWithText img {
+		display: flex;
+		outline: 1px black solid;
+		margin: 2px 2px 5px 2px;
+	}
+
+#links {
+	position: relative;
+	bottom: 185px;
+	font-weight: bold;
+	margin: 15px;
+}
+
+	#links ul {
+		list-style: none;
+	}
+
+		#links ul li {
+			margin: 15px 5px;
+		}
+
+footer {
+	position: relative;
+	bottom: 550px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.7em;
+}
+
+#layerOne ul{
+	display: flex;
+	list-style: none;
+}
+
+	#layerOne ul li {
+		border-right: 1px solid black;
+		margin: 2px 2px;
+		padding: 0px 4px 0px 0px;
+	}
+
+		#layerOne ul li:last-child {
+			border-right: none;
+		}
+
+#layerTwo p {
+	display: flex;
+	color: black;
+	margin: 2px 5px;
+}
+
+	#layerTwo p a {
+		margin: 0px 5px;
+	}
+
+#layerThree {
+	display: flex;
+	color: black;
+}
+
+	#layerThree a {
+		margin: 2px 5px;
+		border-left: 1px solid black;
+		padding: 0px 4px;
+	}
+
+a {
+	text-decoration: none;
+	color: rgb(0, 89, 131);
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
+}
+
+a:focus {
+	color: yellow;
+}
