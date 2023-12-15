@@ -11,7 +11,6 @@
 require('connect.php');
 require('authenticate.php');
 
-
 if (isset($_POST['editButton']) && isset($_POST['title']) && isset($_POST['content']) && isset($_POST['id'])) 
 {
     // Filter/Sanitize user input

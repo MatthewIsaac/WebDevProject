@@ -8,11 +8,11 @@
     Description: Final Project for WEBDEV2
 
 ****************/
-
+session_start();
 require('connect.php');
 
 // Used to display the proper blog posts
-$query = "SELECT * FROM `forum` ORDER BY timestamp DESC, forum_id DESC LIMIT 10";
+$query = "SELECT * FROM `forum` WHERE display_status = 1 ORDER BY timestamp DESC, forum_id DESC LIMIT 10";
 
 $statement = $db->prepare($query);
 
@@ -44,13 +44,15 @@ $statement->execute();
             <div id="blog">
                 <div id="blog_title">
                     <h1 class="padding"><a href="display.php?id=<?= $row['forum_id'] ?>"><?= $row['title'] ?></a></h1>
-                    <h4 id="edit" class="padding"><a href="edit.php?id=<?= $row['forum_id'] ?>">edit</a></h4>
+                    <?php if($_SESSION['admin_status'] === true): ?>
+                        <h4 id="edit" class="padding"><a href="edit.php?id=<?= $row['forum_id'] ?>">edit</a></h4>
+                    <?php endif ?>
                 </div>
                 <h5 class="padding"><?= $row['timestamp'] ?></h5>
                 <?php if(strlen($row['content']) <= 200): ?>
                     <p><?= $row['content'] ?></p>
                 <?php else: ?>
-                    <p><?= substr($row['content'], 0, 200) ?>...<a href="blog.php?id=<?= $row['forum_id'] ?>">View Full Blog</a></p>
+                    <p><?= substr($row['content'], 0, 200) ?>...<a href="blog.php?id=<?= $row['forum_id'] ?>">View Full Post</a></p>
                 <?php endif ?>
             </div>
         <?php endwhile ?>

@@ -11,8 +11,14 @@
 
 session_start();
 include("connect.php");
-include("functions.php");
 
+/*if(isset($_POST['submit']) && !empty($_POST['submit']))
+{
+	$_SESSION['search'] = $_POST['search'];
+
+	header("Location: search.php");
+}
+*/
 
 ?>
 
@@ -31,15 +37,20 @@ include("functions.php");
 						<?php if(!isset($_SESSION['user_name'])): ?>
 							<li><a href="login.php">Log In</a></li>
 							<li><a href="signup.php">Sign Up</a></li>
+						<?php elseif($_SESSION['admin_status'] === true): ?>
+							<li><a href="logout.php">Log out</a></li>
+							<li><a href="#"><?= $_SESSION['user_name']?></a></li>
+							<li><a href="admin.php">View Admin Page</a></li>
 						<?php else: ?>
 							<li><a href="logout.php">Log out</a></li>
 							<li><a href="#"><?= $_SESSION['user_name']?></a></li>
-							<?php endif ?>
+						<?php endif ?>
 					</ul>
 				</nav>
 				<div id="searchButton">
+					<a href="search.php">Search</a>
 					<input id="search" type="text" />
-					<label for="search">Search</label>
+					<button name="submit">Search</button>
 				</div>
 				<p>Welcome, <?= $_SESSION['user_name']?></p>
 			</header>
@@ -72,6 +83,7 @@ include("functions.php");
 					<li><a href="#">SITE CREDITS</a></li>
 					<li><a href="forum.php">FORUM</a></li>
 					<li><a href="#">CONTACT US</a></li>
+					<li><a href="upload.php">File Upload</a></li>
 				</ul>
 			</div>
 

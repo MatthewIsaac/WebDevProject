@@ -32,6 +32,10 @@ if ($_POST && !empty($_POST['title']) && !empty($_POST['content']))
     {
         header("Location: index.php"); /* CHANGE BACK TO INDEX */
     }
+    else
+    {
+        echo "didn't work";
+    }
 
 }
 ?>
